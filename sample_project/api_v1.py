@@ -1,7 +1,7 @@
 from flask import Blueprint, current_app
 from flask_restx import Api
 
-# from sample_project.user import ns as ns_user
+from sample_project.hospital_management import ns
 # from sample_project.person import ns as ns_person
 
 
@@ -14,5 +14,5 @@ api = Api(
     catch_all_404s=True
 )
 api.namespaces.clear()
-# api.add_namespace(ns_user)
+api.add_namespace(ns)
 # api.add_namespace(ns_person)
