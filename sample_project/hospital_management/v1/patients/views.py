@@ -15,7 +15,7 @@ signup_model = ns.model(
         "id": fields.Integer(),
         "full_name": fields.String(required=True),
         "gender": fields.String(required=True),
-        "date_of_birth": fields.DateTime(),
+        "date_of_birth": fields.String(),
         "username": fields.String(required=True),
         "email": fields.String(required=True),
         "password": fields.String(required=True)
