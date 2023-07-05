@@ -1,7 +1,7 @@
 from sample_project.extensions import db
 
 # Create Patients Model
-class Patients(db.Model):
+class Patient(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(100), nullable=False)
     gender = db.Column(db.String, nullable=False)
