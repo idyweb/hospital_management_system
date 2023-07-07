@@ -8,8 +8,9 @@ from sample_project.extensions import db
 from sample_project.hospital_management import ns
 from sample_project.hospital_management.v1.patients.service import create_patient, login
 
-
+#create a signup form
 #create signup model
+
 signup_model = ns.model(
     "SignUp", {
         "id": fields.Integer(),
@@ -22,7 +23,7 @@ signup_model = ns.model(
         
     }
 )
-
+#create a login form
 # create login model
 login_model = ns.model(
     "Login", {

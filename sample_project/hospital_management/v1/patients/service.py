@@ -17,6 +17,7 @@ def create_patient(full_name, gender, date_of_birth, username, email, password):
         return {"message": "Email already exists", "status": False}, 400
     
     hashed_password = bcrypt.hashpw(bytes(password, encoding="utf-8"), bcrypt.gensalt())
+    #DRY
     patient = Patient(full_name=full_name, gender=gender, date_of_birth=date_of_birth,username=username, email=email, password=hashed_password)
     db.session.add(patient)
     db.session.commit()
@@ -57,6 +58,7 @@ def login(data):
     
     access_token = create_access_token(identity =patient.username)
     refresh_token = create_refresh_token(identity=patient.username)
+    #give this output in a html view
     output = {
         
         "patient_id" : patient.id,
@@ -65,5 +67,6 @@ def login(data):
     }
 
     # return the access token
+    #send the access token to the email of the paitient
     return {"access_token": access_token, "refresh_token" :refresh_token, 
             "patient":output, "status": True}, 200
