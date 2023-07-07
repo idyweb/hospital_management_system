@@ -3,6 +3,7 @@ from flask_restx import Api
 
 from sample_project.hospital_management import ns
 # from sample_project.person import ns as ns_person
+from sample_project.hospital_management import doctor_ns
 
 
 blueprint = Blueprint('api_1_0', __name__)
@@ -15,4 +16,4 @@ api = Api(
 )
 api.namespaces.clear()
 api.add_namespace(ns)
-# api.add_namespace(ns_person)
+api.add_namespace(doctor_ns)
