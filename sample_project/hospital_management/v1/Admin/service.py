@@ -48,7 +48,7 @@ def login(data):
     refresh_token = create_refresh_token(identity=admin.email)
     output = {
         
-        "doctor_id" : admin.id,
+        "admin_id" : admin.id,
         "email" : admin.email
     }
 
