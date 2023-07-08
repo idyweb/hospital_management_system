@@ -1,7 +1,7 @@
 import bcrypt
 from flask_jwt_extended import (create_access_token, create_refresh_token)
 
-from sample_project.hospital_management.v1.Admin.model import Admin
+from sample_project.hospital_management.v1.admin.model import Admin
 from sample_project.hospital_management.v1.patients.model import Patient
 from sample_project.extensions import db
 

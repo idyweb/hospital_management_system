@@ -5,7 +5,7 @@ from flask_restx import Resource, fields
 
 
 from sample_project.hospital_management import admin_ns
-from sample_project.hospital_management.v1.Admin.service import create_admin, login
+from sample_project.hospital_management.v1.admin.service import create_admin, login
 
 #create a signup form
 #create signup model
