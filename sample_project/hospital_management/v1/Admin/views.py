@@ -5,7 +5,7 @@ from flask_restx import Resource, fields
 
 
 from sample_project.hospital_management import admin_ns
-from sample_project.hospital_management.v1.admin.service import create_admin, login
+from sample_project.hospital_management.v1.admin.service import create_admin, login, list_all_patients
 
 #create a signup form
 #create signup model
@@ -56,3 +56,11 @@ class Login(Resource):
         
         except Exception as e:
             return {"message": e}, 500
+        
+        
+class PatientList(Resource):
+    def get(self):
+        params = request.args
+        page = int(params.get('page'))
+        per_page = int(params.get('per_page'))
+        return list_all_patients(page, per_page)

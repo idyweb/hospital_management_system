@@ -6,6 +6,7 @@ from sample_project.hospital_management.v1.admin import views as admin_view
 
 admin_ns.add_resource(admin_view.AdminCreate, "/create")
 admin_ns.add_resource(admin_view.Login, "/login")
+admin_ns.add_resource(admin_view.PatientList, "/patients")
 
 
 
